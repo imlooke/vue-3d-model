@@ -1,12 +1,8 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { PLYLoader } from 'three/examples/jsm/loaders/PLYLoader';
-import {
-  Mesh,
-  MeshStandardMaterial,
-  BufferGeometry
-} from 'three';
-import mixin from './model-mixin.vue';
+import { defineComponent } from 'vue'
+import { PLYLoader } from 'three/examples/jsm/loaders/PLYLoader'
+import { Mesh, MeshStandardMaterial, BufferGeometry } from 'three'
+import mixin from './model-mixin.vue'
 
 export default defineComponent({
   name: 'model-ply',
@@ -29,21 +25,21 @@ export default defineComponent({
             color: 0xffffff,
             intensity: 0.8,
           },
-        ];
+        ]
       },
     },
   },
   data() {
     return {
       loader: new PLYLoader(),
-    };
+    }
   },
   methods: {
     getObject(geometry: BufferGeometry) {
-      geometry.computeVertexNormals();
+      geometry.computeVertexNormals()
 
-      return new Mesh(geometry, new MeshStandardMaterial());
+      return new Mesh(geometry, new MeshStandardMaterial())
     },
   },
-});
+})
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader';
-import mixin from './model-mixin.vue';
+import { defineComponent } from 'vue'
+import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader'
+import mixin from './model-mixin.vue'
 
 export default defineComponent({
   name: 'model-collada',
@@ -24,7 +24,7 @@ export default defineComponent({
             color: 0xffffff,
             intensity: 0.8,
           },
-        ];
+        ]
       },
     },
     smoothing: {
@@ -33,17 +33,17 @@ export default defineComponent({
     },
   },
   data() {
-    const loader = new ColladaLoader();
-    loader.setCrossOrigin(this.crossOrigin);
+    const loader = new ColladaLoader()
+    loader.setCrossOrigin(this.crossOrigin)
 
     return {
       loader,
-    };
+    }
   },
   methods: {
     getObject(collada: any) {
-      return collada.scene;
+      return collada.scene
     },
   },
-});
+})
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
-import mixin from './model-mixin.vue';
+import { defineComponent } from 'vue'
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
+import mixin from './model-mixin.vue'
 
 export default defineComponent({
   name: 'model-fbx',
@@ -24,20 +24,20 @@ export default defineComponent({
             color: 0xffffff,
             intensity: 0.8,
           },
-        ];
+        ]
       },
     },
   },
   data() {
     return {
       loader: new FBXLoader(),
-    };
+    }
   },
   methods: {
     getObject(geometry: any) {
-      (this as any).animations = geometry.animations;
-      return geometry;
+      ;(this as any).animations = geometry.animations
+      return geometry
     },
   },
-});
+})
 </script>

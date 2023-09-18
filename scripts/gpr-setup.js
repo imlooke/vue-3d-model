@@ -1,11 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const pkg = require('../package.json');
+const fs = require('fs')
+const path = require('path')
+const pkg = require('../package.json')
 
-pkg.name = '@lwx12525/vue-3d-model';
+pkg.name = '@lwx12525/vue-3d-model'
 
 // Update package.json with the udpated name
-fs.writeFileSync(
-  path.join(__dirname, '../package.json'),
-  JSON.stringify(pkg, null, 2),
-);
+fs.writeFileSync(path.join(__dirname, '../package.json'), JSON.stringify(pkg, null, 2))
